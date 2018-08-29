@@ -12,5 +12,5 @@ func:function()
 	//blank
 		//gathery stuffy codey
 	G.getDict('digger').res['gather']['Bugs']=0.03;
-	}
+}
 });
