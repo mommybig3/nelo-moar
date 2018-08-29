@@ -30,7 +30,7 @@ func:function()
 		name:'Hot Sauce',
 		desc:'@Allows [firekeeper]s to make [hot sauce] with [pepper]s.',
 		icon:[0,2,'imageSheet'],
-		cost:{'culture':10,'insight':10}
+		cost:{'culture':10,'insight':10},
 		req:{'cooking':true,'pottery':true},
 		chance:2,
 	});
