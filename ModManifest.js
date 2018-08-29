@@ -27,14 +27,15 @@ func:function()
 	});
 		//techs
 	new G.Tech({
-	name:'Hot Sauce',
-	desc:'@Allows [firekeeper]s to make [hot sauce] with [pepper]s.',
-	icon:[0,2],
-	cost:{'culture':10,'insight':10}
-	req:{'cooking':true,'pottery':true},
+		name:'Hot Sauce',
+		desc:'@Allows [firekeeper]s to make [hot sauce] with [pepper]s.',
+		icon:[0,2],
+		cost:{'culture':10,'insight':10}
+		req:{'cooking':true,'pottery':true},
 	effects:[
 		],
 	chance:2,
+	});
 		//traits
 	new G.Trait({
 		name:'Spice Lovers',
