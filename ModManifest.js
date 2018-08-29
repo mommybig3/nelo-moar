@@ -12,7 +12,7 @@ func:function()
 	new G.Res({
 		name:'Pepper',
 		desc:'[Pepper]s are spicy little things.',
-		icon:[1,0,'imageSheet'],
+		icon:[0,1,'imageSheet'],
 		turnToByContext:{'eat':{'health':0.06,'happiness':0.3},'decay':{'spoiled food':0.2}},
 		partOf:'food',
 		category:'food',
@@ -20,7 +20,7 @@ func:function()
 		//goods
 	//blank
 		//gathery stuffy codey
-	G.getDict('grass').res['gather']['Pepper']=0.3;
+	G.getDict('grass').res['gather']['Pepper']=0.05;
 		//lands
 }
 });
