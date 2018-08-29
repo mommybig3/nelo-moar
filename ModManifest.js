@@ -29,17 +29,15 @@ func:function()
 	new G.Tech({
 		name:'Hot Sauce',
 		desc:'@Allows [firekeeper]s to make [hot sauce] with [pepper]s.',
-		icon:[0,2],
+		icon:[0,2,'imageSheet'],
 		cost:{'culture':10,'insight':10}
 		req:{'cooking':true,'pottery':true},
-	effects:[
-		],
-	chance:2,
+		chance:2,
 	});
 		//traits
 	new G.Trait({
 		name:'Spice Lovers',
-		desc:'@your people enjoy [Pepper]s and [Hot Sauce] twice as much and will be twice as happy from consuming them.',
+		desc:'@your people enjoy [Pepper]s and [Hot Sauce] twice as much.',
 		icon:[1,2,'imageSheet'],
 		cost:{'culture':5},
 		chance:10,
