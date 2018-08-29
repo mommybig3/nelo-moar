@@ -36,7 +36,7 @@ func:function()
 		],
 	chance:2,
 		//traits
-	 new G.Trait({
+	new G.Trait({
 		name:'Spice Lovers',
 		desc:'@your people enjoy [Pepper]s and [Hot Sauce] twice as much and will be twice as happy from consuming them.',
 		icon:[1,2,'imageSheet'],
@@ -46,16 +46,12 @@ func:function()
 		effects:[
 			{type:'function',func:function(){G.getDict('Pepper').turnToByContext['eat']['happiness']=0.4;}}, 	
       			{type:'function',func:function(){G.getDict('Hot Sauce').turnToByContext['eat']['happiness']=0.6;}},
-    ]
-    });
-		//goods
-	//blank
+   			]
+   	});
 		//gathery stuffy codey
 	G.getDict('grass').res['gather']['Pepper']=0.05;
 		//new modes
 	G.getDict('firekeeper').modes['HotSauce']={name:'Make Hot Sauce',icon:[1,1],desc:'Use [Pepper]s to make [Hot Sauce].',req:{'Hot Sauce':true}};
 	G.getDict('firekeeper').effects.push({type:'convert',from:{'Pepper':6},into:{'Hot Sauce':1},every:7,mode:'HotSauce'});
-		//lands
-	//blank
 }
 });
