@@ -9,11 +9,10 @@ sheets:{'imageSheet':'https://i.imgur.com/32VPQ1t.png'},
 func:function()
 	{
 		new G.Res({
-			name:'insight',
-			desc:'[magic] requires wisdom to be used, can be a powerful tool.//'+limitDesc('[wisdom]')+'',
+			name:'magic',
+			desc:'[magic] requires wisdom to be used, can be a powerful tool.',
 			icon:[0,0],
 			category:'main',
-			limit:'wisdom',
 			getDisplayAmount:researchGetDisplayAmount,
 			whenGathered:researchWhenGathered,
 		});
