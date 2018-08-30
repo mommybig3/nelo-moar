@@ -10,11 +10,9 @@ func:function()
 	{
 		new G.Res({
 			name:'magic',
-			desc:'[magic] requires wisdom to be used, can be a powerful tool.',
+			desc:'[magic] is a powerful yet dangerous tool.',
 			icon:[0,0],
 			category:'main',
-			getDisplayAmount:researchGetDisplayAmount,
-			whenGathered:researchWhenGathered,
 		});
 	}
 });
