@@ -72,7 +72,7 @@ func:function()
 		category:'gear',
 	});
 	G.getDict('artisan').modes['primitivetraps']={name:'Craft primitive traps',icon:[0,0],desc:'Turn [stick]s and [thorns] into [primitive traps].',req:{'trapping':true},use:{'stone tools':1,'stick':3,'thorns':5}};
-	G.getDict('artisan').effects.push({type:'convert',from:{'stick':3,'thorns':5},into:{'primitive traps':1},every:7,mode:'primitivetraps'});
+	G.getDict('artisan').effects.push({type:'convert',from:{'stick':3,'thorns':5},into:{'primitive traps':1},every:22,mode:'primitivetraps'});
 		//trapping tech
 	new G.Tech({
 		name:'trapping',
@@ -94,10 +94,10 @@ func:function()
 		//upkeep:{'coin':0.2},
 		gizmos:true,
 		modes:{
-			'primitive traps':{name:'Use primitive traps',icon:[0,0],desc:'Trap animals with [primitive traps].',use:{'primitive traps':3},req:{'trapping':true}},
+			'primitive traps':{name:'Use primitive traps',icon:[0,0],desc:'Trap animals with [primitive traps].',use:{'primitive traps':5},req:{'trapping':true}},
 		},
 		effects:[
-			{type:'gather',context:'hunt',amount:1,max:3,mode:'primitive traps'},
+			{type:'gather',context:'hunt',amount:1,max:5,mode:'primitive traps'},
 			{type:'function',func:unitGetsConverted({'wounded':1},0.001,0.03,'[X] [people] wounded while trapping.','trapper was','trappers were'),chance:1/30},
 			{type:'mult',value:1.2,req:{'harvest rituals':'on'}}
 		],
