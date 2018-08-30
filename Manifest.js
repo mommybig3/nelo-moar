@@ -105,5 +105,15 @@ func:function()
 		category:'production',
 		priority:5,
 	});
+		//vegetables
+	new G.Res({
+		name:'vegetables',
+		desc:'[vegetables] may not be as tasty as fruit, but they are a fair bit healthier',
+		icon:[0,0],
+		turnToByContext:{'eating':{'health':0.03,'happiness':0.01},'decay':{'spoiled food':1}},
+		partOf:'food',
+		category:'food',
+	});
+	G.getDict('grass').res['gather']['vegetables']=0.5;
 }
 });
