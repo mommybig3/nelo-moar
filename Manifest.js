@@ -1,10 +1,9 @@
 G.AddData({
-name:'The Moar Mod',
-author:'Mommybig3',
-desc:'Adds LOTZ of stuffs, modified base dataset. (Base dataset by Ortiel)',
+name:'Default dataset',
+author:'Orteil',
+desc:'The default dataset for Legacy.',
 engineVersion:1,
-manifest:'Manifest.js',
-sheets:{'imageSheet':'https://i.imgur.com/32VPQ1t.png'},
+manifest:0,
 func:function()
 {
 	/*
@@ -1383,17 +1382,6 @@ func:function()
 		getDisplayAmount:researchGetDisplayAmount,
 		whenGathered:researchWhenGathered,
 	});
-	
-	new G.Res({
-		name:'magic',
-		desc:'[magic] is a powerful yet dangerous tool.//'+limitDesc('[wisdom]')+',
-		icon:[9,5],
-		category:'main',
-		limit:'wisdom',
-			getDisplayAmount:researchGetDisplayAmount,
-		whenGathered:researchWhenGathered,
-		});
-	
 	new G.Res({
 		name:'wisdom',
 		hidden:true,
@@ -1406,13 +1394,13 @@ func:function()
 		desc:'[science] is the product of experiments and discoveries.//'+limitDesc('[education]')+'//Many technologies require science to be researched.',
 		icon:[6,4],
 		category:'main',
-		//limit:'education',
+		limit:'education',
 		getDisplayAmount:researchGetDisplayAmount,
 		whenGathered:researchWhenGathered,
 	});
 	new G.Res({
 		name:'education',
-		//hidden:true,
+		hidden:true,
 		icon:[6,5],
 		category:'main',
 	});
@@ -1428,7 +1416,7 @@ func:function()
 	});
 	new G.Res({
 		name:'inspiration',
-		//hidden:true,
+		hidden:true,
 		icon:[10,5],
 		category:'main',
 	});
@@ -1444,7 +1432,7 @@ func:function()
 	});
 	new G.Res({
 		name:'spirituality',
-		//hidden:true,
+		hidden:true,
 		icon:[7,5],
 		category:'main',
 	});
@@ -1461,7 +1449,7 @@ func:function()
 	});
 	new G.Res({
 		name:'authority',
-		//hidden:true,
+		hidden:true,
 		icon:[11,5],
 		category:'main',
 	});
@@ -1765,9 +1753,11 @@ func:function()
 		modes:{
 			'off':G.MODE_OFF,
 			'bricks':{name:'Fire bricks',icon:[3,8],desc:'Produce 10 [brick]s out of 1 [clay].',use:{'worker':1,'stone tools':1},req:{}},
+			'glass':{name:'Smelt glass',icon:[4,8],desc:'Produce 10 [glass] out of 2 [sand].',use:{'worker':1,'metal tools':1},req:{}},
 		},
 		effects:[
 			{type:'convert',from:{'clay':1},into:{'brick':10},every:5,mode:'bricks'},
+			{type:'convert',from:{'sand':2},into{'glass':10},every:7,mode:'glass'},
 		],
 		gizmos:true,
 		req:{'masonry':true},
