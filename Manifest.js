@@ -1385,13 +1385,13 @@ func:function()
 	});
 	
 	new G.Res({
-			name:'magic',
-			desc:'[magic] is a powerful yet dangerous tool.//'+limitDesc('[wisdom]')+',
-			icon:[9,5],
-			category:'main',
-			limit:'wisdom',
+		name:'magic',
+		desc:'[magic] is a powerful yet dangerous tool.//'+limitDesc('[wisdom]')+',
+		icon:[9,5],
+		category:'main',
+		limit:'wisdom',
 			getDisplayAmount:researchGetDisplayAmount,
-			whenGathered:researchWhenGathered,
+		whenGathered:researchWhenGathered,
 		});
 	
 	new G.Res({
@@ -1406,13 +1406,13 @@ func:function()
 		desc:'[science] is the product of experiments and discoveries.//'+limitDesc('[education]')+'//Many technologies require science to be researched.',
 		icon:[6,4],
 		category:'main',
-		limit:'education',
+		//limit:'education',
 		getDisplayAmount:researchGetDisplayAmount,
 		whenGathered:researchWhenGathered,
 	});
 	new G.Res({
 		name:'education',
-		hidden:true,
+		//hidden:true,
 		icon:[6,5],
 		category:'main',
 	});
@@ -1428,7 +1428,7 @@ func:function()
 	});
 	new G.Res({
 		name:'inspiration',
-		hidden:true,
+		//hidden:true,
 		icon:[10,5],
 		category:'main',
 	});
@@ -1444,7 +1444,7 @@ func:function()
 	});
 	new G.Res({
 		name:'spirituality',
-		hidden:true,
+		//hidden:true,
 		icon:[7,5],
 		category:'main',
 	});
@@ -1461,7 +1461,7 @@ func:function()
 	});
 	new G.Res({
 		name:'authority',
-		hidden:true,
+		//hidden:true,
 		icon:[11,5],
 		category:'main',
 	});
@@ -4183,18 +4183,4 @@ func:function()
 		return lvl;
 	}
 }
-});
-
-G.AddData({
-name:'The Moar Mod',
-author:'Mommybig3',
-desc:'Adds lotz of stuffs!',
-engineVersion:1,
-manifest:'Manifest.js',
-requires:['Default dataset*'],
-sheets:{'imageSheet':'https://i.imgur.com/32VPQ1t.png'},
-func:function()
-	{
-		
-	}
 });
