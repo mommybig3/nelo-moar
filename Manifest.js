@@ -5,9 +5,6 @@ desc:'The default dataset for Legacy.',
 manifest:0,
 func:function()
 {
-		//glass crafting
-	G.getDict('kiln').modes['Glass']={name:'Smelt Glass',desc:'Produce 10 [glass] out of 2 [sand].',req:{},use:{'worker':1,'stone tools':1}};
-	G.getDict('kiln').effects.push({type:'convert',from:{'sand':2},into:{'glass':10},every:7,mode:'Glass'});
 		//eat herbs toggle
 	new G.Policy({
 		name:'eat herbs',
@@ -24,5 +21,14 @@ func:function()
 		],
 		category:'food',
 	});
+		//thorns
+	new G.Res({
+		name:'thorns',
+		desc:'[thorns] from [berry bush]es and [succulents], can be used to make traps.',
+		icon:[0,0],
+		category:'build',
+	});
+	G.getDict('berry bush').res['gather']['thorns']=0.06;
+	G.getDict('succulents').res['gather']['thorns']=0.08;
 }
 });
