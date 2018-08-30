@@ -115,5 +115,37 @@ func:function()
 		category:'food',
 	});
 	G.getDict('grass').res['gather']['vegetables']=0.5;
+		//eat fruit toggle
+	new G.Policy({
+		name:'eat fruit',
+		desc:'Toggle the ability for your people to eat [fruit].',
+		icon:[6,12,4,7],
+		cost:{'influence':1},
+		startMode:'on',
+		req:{'rules of food':true},
+		effects:[
+			{type:'make part of',what:['fruit'],parent:'food'},
+		],
+		effectsOff:[
+			{type:'make part of',what:['fruit'],parent:''},
+		],
+		category:'food',
+	});
+		//eat vegetables toggle
+	new G.Policy({
+		name:'eat vegetables',
+		desc:'Toggle the ability for your people to eat [vegetables].',
+		icon:[6,12,0,0],
+		cost:{'influence':1},
+		startMode:'on',
+		req:{'rules of food':true},
+		effects:[
+			{type:'make part of',what:['vegetables'],parent:'food'},
+		],
+		effectsOff:[
+			{type:'make part of',what:['vegetables'],parent:''},
+		],
+		category:'food',
+	});
 }
 });
