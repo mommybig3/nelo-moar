@@ -50,7 +50,7 @@ func:function()
 		//gathery stuffy codey
 	G.getDict('grass').res['gather']['Pepper']=0.05;
 		//new modes
-	G.getDict('firekeeper').modes['HotSauce']={name:'Make Hot Sauce',icon:[1,1],desc:'Use [Pepper]s to make [Hot Sauce].',req:{'Spicy Cuisine':true}};
+	G.getDict('firekeeper').modes['HotSauce']={name:'Make Hot Sauce',icon:[1,1,'imageSheet'],desc:'Use [Pepper]s to make [Hot Sauce].',req:{'Spicy Cuisine':true}};
 	G.getDict('firekeeper').effects.push({type:'convert',from:{'Pepper':6},into:{'Hot Sauce':1},every:7,mode:'HotSauce'});
 }
 });
