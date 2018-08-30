@@ -8,8 +8,8 @@ func:function()
 		//unitGetsConverted
 		var unitGetsConverted=function(into,min,max,message,single,plural)
 	{
-		//the unit is destroyed and its workers are converted into something else (such as wounded or dead)
-		//min and max define the random percent of the unit's amount that gets wounded every day
+			//the unit is destroyed and its workers are converted into something else (such as wounded or dead)
+			//min and max define the random percent of the unit's amount that gets wounded every day
 		return function(me)
 		{
 			var toChange=Math.min(1,Math.random()*(max-min)+min);
@@ -71,8 +71,8 @@ func:function()
 		icon:[0,0],
 		category:'gear',
 	});
-	G.getDict('artisan').modes['primitivetraps']={name:'Craft traps out of sticks and thorns',icon:[0,0],desc:'Turn [stick]s and [thorns] into [primitive traps].',req:{'trapping':true},use:{'stone tools':1,'stick':3,'thorns':5}};
-	G.getDict('artisan').effects.push({type:'convert',from:{'stick':3,'thorns':5},into:{'primitive traps':1},every:7,mode:'primitive traps'});
+	G.getDict('artisan').modes['primitivetraps']={name:'Craft primitive traps',icon:[0,0],desc:'Turn [stick]s and [thorns] into [primitive traps].',req:{'trapping':true},use:{'stone tools':1,'stick':3,'thorns':5}};
+	G.getDict('artisan').effects.push({type:'convert',from:{'stick':3,'thorns':5},into:{'primitive traps':1},every:7,mode:'primitivetraps'});
 		//trapping tech
 	new G.Tech({
 		name:'trapping',
