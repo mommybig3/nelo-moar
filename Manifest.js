@@ -16,5 +16,6 @@ func:function()
 			limit:'wisdom',
 			getDisplayAmount:researchGetDisplayAmount,
 			whenGathered:researchWhenGathered,
-	});
+		});
+	}
 });
