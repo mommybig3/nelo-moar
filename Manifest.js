@@ -1071,8 +1071,8 @@ func:function()
 	});
 	
 	new G.Res({
-		name:'advanced building materials',
-		desc:'Building materials such as [concrete] and [glass], used to build advanced structures.',
+		name:'modern building materials',
+		desc:'Building materials such as [concrete] and .ANOTHER ONE?., used to build advanced structures.',
 		icon:[3,9],
 		meta:true,
 		tick:loseMaterialsTick,
@@ -1088,14 +1088,14 @@ func:function()
 		name:'glass',
 		desc:'Obtained by melting [sand]; can be used to construct windows, which are part of most advanced buildings.',
 		icon:[4,8],
-		partOf:'advanced building materials',
+		partOf:'basic building materials',
 		category:'build',
 	});
 	new G.Res({
 		name:'concrete',
 		desc:'An exceptionally sturdy construction material, made by mixing [limestone] with [water] and letting it set.',
 		icon:[5,8],
-		partOf:'advanced building materials',
+		partOf:'modern building materials',
 		category:'build',
 	});
 	
@@ -2950,7 +2950,7 @@ func:function()
 	});
 	new G.Tech({
 		name:'masonry',
-		desc:'@unlocks [kiln]s, which produce a variety of goods such as [brick]s@[carver]s can now turn [stone]s into [cut stone] slowly<>',
+		desc:'@unlocks [kiln]s, which produce a variety of goods such as [brick]s and [glass]@[carver]s can now turn [stone]s into [cut stone] slowly<>',
 		icon:[29,6],
 		cost:{'insight':35},
 		req:{'building':true,'pottery':true},
