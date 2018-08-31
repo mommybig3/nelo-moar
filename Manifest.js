@@ -67,7 +67,7 @@ func:function()
 		//traps
 	new G.Res({
 		name:'primitive traps',
-		desc:'Traps made from [stick]s and [thorns].//Used by [trapper]s.',
+		desc:'Traps made from [stick]s and [thorns]. Used by [trapper]s.',
 		icon:[0,0],
 		category:'gear',
 	});
@@ -97,7 +97,7 @@ func:function()
 			'primitive traps':{name:'Use primitive traps',icon:[0,0],desc:'Trap animals with [primitive traps].',use:{'primitive traps':5},req:{'trapping':true}},
 		},
 		effects:[
-			{type:'gather',context:'hunt',amount:1,max:5,mode:'primitive traps'},
+			{type:'gather',context:'hunt',amount:1,max:3,mode:'primitive traps'},
 			{type:'function',func:unitGetsConverted({'wounded':1},0.001,0.03,'[X] [people] wounded while trapping.','trapper was','trappers were'),chance:1/30},
 			{type:'mult',value:1.2,req:{'harvest rituals':'on'}}
 		],
@@ -108,7 +108,7 @@ func:function()
 		//vegetables
 	new G.Res({
 		name:'vegetables',
-		desc:'[vegetables] may not be as tasty as fruit, but they are a fair bit healthier',
+		desc:'[vegetables] may not be as tasty as fruit, but they are a fair bit healthier.',
 		icon:[0,0],
 		turnToByContext:{'eating':{'health':0.03,'happiness':0.01},'decay':{'spoiled food':1}},
 		partOf:'food',
