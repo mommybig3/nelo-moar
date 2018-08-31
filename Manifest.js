@@ -62,8 +62,8 @@ func:function()
 		icon:[0,0],
 		category:'build',
 	});
-	G.getDict('berry bush').res['gather']['thorns']=0.06;
-	G.getDict('succulents').res['gather']['thorns']=0.08;
+	G.getDict('berry bush').res['gather']['thorns']=0.5;
+	G.getDict('succulents').res['gather']['thorns']=1;
 		//traps
 	new G.Res({
 		name:'primitive traps',
